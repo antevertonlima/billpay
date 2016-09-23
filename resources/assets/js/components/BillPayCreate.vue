@@ -41,7 +41,7 @@
         },
         methods: {
             submit(){
-                this.$http.post(`http://billpay.app/api/bill_pays`, this.bill)
+                this.$http.post(`http://billpay.ddns.net/api/bill_pays`, this.bill)
                           .then((response) => {
                             this.$router.go({name: 'bill-pay.list'});
                           })

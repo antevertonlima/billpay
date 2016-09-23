@@ -67,7 +67,7 @@
         },
         methods:{
             login(){
-                this.$http.post('http://billpay.app/api/token',this.user)
+                this.$http.post('http://billpay.ddns.net/api/token',this.user)
                           .then((response) => {
                             window.localStorage.setItem('token', response.data.token);
                             this.$router.go({name: 'bill-pay.list'});

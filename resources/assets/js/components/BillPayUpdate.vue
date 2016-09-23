@@ -41,14 +41,14 @@
         },
         ready() {
             let id = this.$route.params.id;
-            this.$http.get(`http://billpay.app/api/bill_pays/${id}`)
+            this.$http.get(`http://billpay.ddns.net/api/bill_pays/${id}`)
                       .then((response) => {
                         this.bill = response.data;
                       })
         },
         methods: {
             submit(){
-                this.$http.put(`http://billpay.app/api/bill_pays/${this.bill.id}`, this.bill)
+                this.$http.put(`http://billpay.ddns.net/api/bill_pays/${this.bill.id}`, this.bill)
                           .then((response) => {
                             this.$router.go({name: 'bill-pay.list'});
                             Materialize.toast('Conta Editada com sucesso!', 2500);

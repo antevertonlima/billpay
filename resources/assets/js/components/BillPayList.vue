@@ -52,7 +52,7 @@
         },
         methods: {
             destroy(o){
-                this.$http.delete(`http://billpay.app/api/bill_pays/${o.id}`)
+                this.$http.delete(`http://billpay.ddns.net/api/bill_pays/${o.id}`)
                           .then((response) => {
                             this.bills.$remove(o);
                             Materialize.toast('Conta removida com sucesso!', 4000);
@@ -60,7 +60,7 @@
             }
         },
         ready() {
-            this.$http.get('http://billpay.app/api/bill_pays')
+            this.$http.get('http://billpay.ddns.net/api/bill_pays')
                       .then((response) => {
                         this.bills = response.data;
                       })
