@@ -8,8 +8,7 @@
         <title>Laravel</title>
 
         <link rel="stylesheet" href="/css/app.css">
-        <link rel="stylesheet" href="/css/login.css">
-        
+        <link rel="stylesheet" href="/css/login.css">        
     </head>
     <body>
     <router-view></router-view>
